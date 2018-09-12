@@ -40,6 +40,17 @@
     footer{
         margin-top:0px;
     }
+    p{
+        font-size: 18px;
+
+    }
+    h3{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    h1{
+        font-size: 40px;
+    }
 </style>
 
 <div class="main">
@@ -70,8 +81,14 @@
         <div class="main1">
             <h3>Detaljnije o projektu</h3>
             <p>
-                Aplikacija koju sam napravio za projekt iz kolegija PIN je napisana u MVC(Models.Views-Controllers) ASP.NET C# jeziku. MVC je obrazac softverske arhitekture u kojem se odvajaju pojedini dijelovi aplikacije u komponente ovisno o njihovoj namjeni. MVC se sastoji od tri cijeline. Model - to su zapravo podaci tj. baza podataka, View - je ono što klijent vidi na ekranu, Controller - prihvaća ulazne naputke i pretvara ih u naloge prema modelu ili pogledu.<br />
-                Znači u Modelu se nalaze podadaci tj. naša baza podataka, u mapi Controllers je HomeController.cs koji je zapravo cijeli mozak naše aplikacije. Folder View se sastoji od foldera Home i Shared, u Home se nalaze sve nase stranice koje nam trebaju prilikom koristenja MusicAppa, dok u folderu Shared se nalaze _Layout.cshtml i Error.cshtml koje predstavljaju dio koda koji se biti isti kod svih stranica koje se nalaze u Homeu.<br />
+                Aplikacija koju sam predao za projekt iz kolegija PIN, napisana je pomoću Visual Studia u programskom jeziku C#. ASP.NET je web framework koji nam pomaže da jednostavno kreiramo stranice koristeći C#, HTML, CSS, JS...<br />
+                MVC(Models-Views-Controllers) je obrazac softverske arhitekture u kojem se odvajaju pojedini dijelovi aplikacije u komponente ovisno o njihovoj namjeni.<br />
+                MVC se sastoji od tri cjeline: <br />
+                Model - to su zapravo podaci tj. baza podataka<br />
+                View - je ono što klijent vidi na ekranu<br />
+                Controller - prihvaća ulazne naputke i pretvara ih u naloge prema modelu ili pogledu.<br />
+                Znači u Modelu se nalaze podadaci tj. naša baza podataka koja je napravljena pomoću entity frameworka-a. HomeController.cs je zapravo mozak naše aplikacije. On je zadužen za spajanje modela i viewa, npr. očitava uneseno ime i lozinku od korisnika, te sprema te podatke u bazu podataka. 
+                Folder View se sastoji od cshtml fileova, koji su obični html kod uz mogučnost korištenja C#. _Layout.cshtml i Error.cshtml predstavljaju dio koda kojeg dijele sve stranice koje se nalaze u Homeu.<br />
                 MusicApp je u biti web aplikacija pomoću koje stvaramo svoju playlistu omiljene glazbe. Za svaku pjesmu koju dodamo u našu playlistu moramo dodati i ime glazbenika/grupe, ime pjesme, naziv albuma, žanr i datum izdavanja.
                 Baza podataka MusicDB.mdf se sastoji od tih entiteta, svakim dodavanjem pjesme preko stranice ona se automatski dodaje u našu bazu podataka.
                 Preko Create New dodajemo novi element u našu listu, moramo ispuniti sve podatke da bi se element uspiješno dodao. Također svaki element koji dodamo u listu, možemo naknadno mijenjati ili brisati.<br />
