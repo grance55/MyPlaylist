@@ -1,0 +1,101 @@
+﻿@model MusicApp.Models.Music
+
+@{
+    ViewBag.Title = "About";
+}
+<style>
+    .main1{
+        margin-top:60px;
+    }
+
+    .main2 {
+        margin-top: 100px;
+    }
+    .back{
+        margin-top:40px;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        font-size:15px;
+    }
+    li a {
+        font-size: 17px;
+    }
+    .previous:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .previous {
+        background-color: #C3C4C4;
+        color: black;
+    }
+    .round {
+        border-radius: 50%;
+    }
+    span{
+        font-size:20px;
+    }
+    footer{
+        margin-top:0px;
+    }
+</style>
+
+<div class="main">
+        
+        <div class="main1">
+            <h1>Projekt iz predmeta PIN</h1>
+            <br /><br />
+            <h3>Osnovna pravila:</h3>
+            <p>
+                - II kolokvij se polaže predajom projekta koji se mora usmeno braniti pred profesorom
+                <br />- Studenti samostalno određuju temu i individualno izrađuju projekt (grupni projekti nisu predviđeni)
+                <br />- Projekt se predaje na zadnjem predavanju ili ispitnim rokovima (zimskim i jesenskim)
+                <br />- Projekt se ne šalje email-om već ga je potrebno staviti na vlastiti GitHub repozitorij prije odgovaranja(otvoriti GitHub račun ako već ne postoji)
+                <br />- U okviru projekta mora postojati i README.md datoteka s kratkim opisom projektne aplikacije
+                <br />- Poveznica na GitHub repozitorij projekta šalje se mailom najkasnije dan prije predaje, moguće je i naknadno napraviti manje izmjene na projektu ali onda se te razlike moraju usmeno objasniti
+                <br />- Prilikom odgovaranja treba pokazati razumijevanje rješenja korištenih u projektu, kod se mora moći objasniti ili se pretpostavlja da student nije samostalno izradio projekt
+                <br />- Kod ocjenjivanja osim kvaliteta projekta uzima se u obzir i kvaliteta usmenog odgovora
+                <br />- Projekt podrazumijeva izradu aplikacije korištenjem ASP.NET Core MVC framework-a (1.1 ili 2.0 verzija)
+                <br />- Aplikacija mora biti smislena (npr. Videoteka,  Studentska evidencija, itd. ) a ne samo demonstracija tehnologije
+                <br />- Predana aplikacija mora biti završena i funkcionalna inače se neće razmatrati
+                <br />- Predaje se izvorni kod aplikacije koji mora sadržavati README.md datoteku s osnovnim opisom
+                <br />- Aplikacija mora sadržavati i potpuno funkcionalne Model, View i Controller komponente, kao i lokalnu bazu podataka
+                <br />- Potrebno je koristiti Entity Framework kao i LINQ upite
+                <br />- View komponente moraju imati zajednički predložak
+                <br />- Projekt ne smije biti djelomično ili u cijelosti korišten u drugim kolegijima
+            </p>
+        </div>
+        <div class="main1">
+            <h3>Detaljnije o projektu</h3>
+            <p>
+                Aplikacija koju sam napravio za projekt iz kolegija PIN je napisana u MVC(Models.Views-Controllers) ASP.NET C# jeziku. MVC je obrazac softverske arhitekture u kojem se odvajaju pojedini dijelovi aplikacije u komponente ovisno o njihovoj namjeni. MVC se sastoji od tri cijeline. Model - to su zapravo podaci tj. baza podataka, View - je ono što klijent vidi na ekranu, Controller - prihvaća ulazne naputke i pretvara ih u naloge prema modelu ili pogledu.<br />
+                Znači u Modelu se nalaze podadaci tj. naša baza podataka, u mapi Controllers je HomeController.cs koji je zapravo cijeli mozak naše aplikacije. Folder View se sastoji od foldera Home i Shared, u Home se nalaze sve nase stranice koje nam trebaju prilikom koristenja MusicAppa, dok u folderu Shared se nalaze _Layout.cshtml i Error.cshtml koje predstavljaju dio koda koji se biti isti kod svih stranica koje se nalaze u Homeu.<br />
+                MusicApp je u biti web aplikacija pomoću koje stvaramo svoju playlistu omiljene glazbe. Za svaku pjesmu koju dodamo u našu playlistu moramo dodati i ime glazbenika/grupe, ime pjesme, naziv albuma, žanr i datum izdavanja.
+                Baza podataka MusicDB.mdf se sastoji od tih entiteta, svakim dodavanjem pjesme preko stranice ona se automatski dodaje u našu bazu podataka.
+                Preko Create New dodajemo novi element u našu listu, moramo ispuniti sve podatke da bi se element uspiješno dodao. Također svaki element koji dodamo u listu, možemo naknadno mijenjati ili brisati.<br />
+            </p>
+        </div>
+        <div class="main2">
+            <p>
+                <b>
+                    <span>Visoka škola za informacijske tehnologije</span><br />
+                    Student: Franko Grancarić<br />
+                    GitHub: grance55<br />
+                    Profesor: Ivan Britvić<br />
+                    Predmet: Programiranje na internetu<br />
+                </b>
+            </p>
+        </div>
+        
+</div>
+
+
+<div class="back">
+    <a href="http://localhost:60463/" class="previous round"><b>&#8249;</b></a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

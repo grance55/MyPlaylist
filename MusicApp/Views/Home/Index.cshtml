@@ -1,0 +1,139 @@
+﻿@model IEnumerable<MusicApp.Models.Music>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    a {
+        text-decoration-color: none;
+        color:white;
+    }
+    a:hover {
+        text-decoration-color: none;
+        color: white;
+    }
+    .edit {
+        background-color: #008CBA;
+    }
+    .delete {
+        background-color: #f4511e;
+    }
+    .button {
+        border: none;
+        padding: 7px 7px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.8;
+        transition: 0.3s;
+        width: 70px;
+        height: 40px;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 8%;
+    }
+    .button:hover {
+        opacity: 1;   
+    }
+    .table {
+        margin-top: 30px;
+    }
+    .previous:hover {
+        background-color: #ddd;
+        color: darkslategray;
+    }
+    .previous {
+        background-color: #C3C4C4;
+        color: darkslategray;
+    }
+    .round {
+        border-radius: 50%;
+    }
+    h2 {
+        margin: 0;
+    }
+    .entiteti {
+        font-size: 17px;
+    }
+    
+    .entiteti th{
+        /*
+        width:60px;
+        */
+    }
+    .podatci td {
+        font-size: 15px;
+    }
+    .header{
+        margin-top: 80px;
+        padding-left:40px;
+    }
+    .header a {
+        position: relative;
+    }
+    .header h2 {
+        float: left;
+        color: darkslategray;
+        font-size:40px;
+        padding-top:6px;
+        font-family: -webkit-body;
+    }
+</style>
+<div class="header">
+
+    <h2>Add To Playlist</h2>
+    <a href="http://localhost:60463/Home/Create/" class="previous round" style="text-decoration: none; margin-left:20px; display: inline-block; padding: 9px 18px; width:50px; height:50px; font-size:25px; text-align:center; ">+</a>
+</div>
+
+<br />
+
+
+    
+    <br />
+<table class="table">
+    <tr class="entiteti" style="vertical-align:middle;">
+        <th>
+            @Html.DisplayNameFor(model => model.Singer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Album)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Release_Date)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="podatci">
+            <td style="vertical-align:middle;">
+                @Html.DisplayFor(modelItem => item.Singer)
+            </td>
+            <td style="vertical-align:middle;">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td style="vertical-align:middle;">
+                @Html.DisplayFor(modelItem => item.Album)
+            </td>
+            <td style="vertical-align:middle;">
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td style="vertical-align:middle;">
+                @Html.DisplayFor(modelItem => item.Release_Date)
+            </td>
+            <td style="vertical-align:middle;">
+                <button class="button edit">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                <button class="button delete">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+            </td>
+        </tr>
+    }
+
+</table>
